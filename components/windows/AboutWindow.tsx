@@ -293,6 +293,7 @@ const AboutWindow: React.FC = () => {
             </h1>
 
            
+           
 
             {/* Consulting Services */}
             <section>
