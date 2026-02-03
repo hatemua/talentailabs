@@ -1,33 +1,25 @@
 'use client';
 
-import { Hero } from '../components/Hero';
-import { StatsBar } from '../components/Stats';
-import { Services } from '../components/Services';
-import { Technologies } from '../components/Technologies';
-import { PortfolioEnhanced } from '../components/PortfolioEnhanced';
-import { Team } from '../components/Team';
-import { WhyUs } from '../components/WhyUs';
-import { Testimonials } from '../components/Testimonials';
-import { Product } from '../components/Product';
-import { Contact } from '../components/Contact';
-import { Footer } from '../components/Footer';
-import { Navbar } from '../components/Navbar';
+import React, { useState } from 'react';
+import { BootScreen } from '../components/desktop/BootScreen';
+import { Desktop } from '../components/desktop/Desktop';
+import { TopBar } from '../components/desktop/TopBar';
+import { Dock } from '../components/desktop/Dock';
 
 export default function Home() {
+  const [bootComplete, setBootComplete] = useState(false);
+
   return (
-    <main>
-      <Navbar />
-      <Hero />
-      <StatsBar />
-      <Services />
-      <Technologies />
-      <PortfolioEnhanced />
-      <Team />
-      <WhyUs />
-      <Testimonials />
-      <Product />
-      <Contact />
-      <Footer />
-    </main>
+    <>
+      {!bootComplete && <BootScreen onComplete={() => setBootComplete(true)} />}
+
+      {bootComplete && (
+        <main className="relative w-full h-screen overflow-hidden">
+          <TopBar />
+          <Desktop />
+          <Dock />
+        </main>
+      )}
+    </>
   );
 }
