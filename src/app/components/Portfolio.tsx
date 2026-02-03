@@ -1,31 +1,43 @@
 import React from "react";
 import { motion } from "motion/react";
 import { ExternalLink, ArrowRight, ArrowUpRight } from "lucide-react";
-import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
+import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 
 const projects = [
   {
-    title: "TalentAI Skill Protocol",
-    tag: "Flagship Product",
-    description: "Architecting a decentralized verification engine for institutional talent. Powering over 45k+ unique developer identities on the Hedera Hashgraph.",
-    tech: ["Hedera", "Rust", "TypeScript"],
+    title: "TalentAI Platform",
+    tag: "Our Flagship Product",
+    description: "We built TalentAI from zero to 45,000+ developers. It's an AI-powered platform that verifies real skills using assessments and blockchain credentials. Companies use it to verify both internal team capabilities and external candidates. Backed by a $50K Hedera Foundation grant.",
+    stats: "45,000+ users • Hedera blockchain • AI matching engine",
+    tech: ["Hedera", "AI/ML", "React", "Node.js"],
     image: "https://images.unsplash.com/photo-1642432556591-72cbc671b707?q=80&w=1200",
     size: "large"
   },
   {
-    title: "MARIPOSA AI Engine",
-    tag: "Strategic AI",
-    description: "A proprietary autonomous trading infrastructure leveraging multi-agent neural networks for real-time market optimization.",
-    tech: ["Python", "PyTorch", "Solana"],
+    title: "MARIPOSA",
+    tag: "AI Trading System",
+    description: "MARIPOSA is our multi-LLM trading system that analyzes markets, manages risk, and executes trades autonomously. Built with real-time data processing, multiple AI models for decision-making, and sophisticated risk management. Processing millions in trading volume.",
+    stats: "Multi-LLM system • Real-time processing • Autonomous execution",
+    tech: ["Python", "AI/ML", "Solana", "APIs"],
     image: "https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=800",
     size: "small"
   },
   {
-    title: "Vortex Bridge",
-    tag: "Cross-Chain",
-    description: "Seamless asset migration protocol with institutional-grade security and sub-second finality across major L1s.",
-    tech: ["Solidity", "Zero-Knowledge", "WASM"],
+    title: "Crypto Wallet",
+    tag: "Blockchain Infrastructure",
+    description: "Secure, non-custodial wallet supporting multiple blockchain networks. Features include DeFi integration, token swaps, staking, and enterprise-grade security. Built for both retail users and institutional clients.",
+    stats: "Multi-chain • DeFi integration • Enterprise security",
+    tech: ["React Native", "Solana", "Ethereum", "Security"],
     image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=800",
+    size: "small"
+  },
+  {
+    title: "DeFi Protocol",
+    tag: "Smart Contracts",
+    description: "Custom DeFi protocol with staking, liquidity pools, and governance mechanisms. Audited smart contracts handling significant TVL. Built to institutional security standards with comprehensive testing.",
+    stats: "Audited contracts • Staking & governance • Institutional grade",
+    tech: ["Solidity", "Hedera", "Web3", "Audits"],
+    image: "https://images.unsplash.com/photo-1621504450181-5d356f61d307?q=80&w=800",
     size: "small"
   },
 ];
@@ -41,17 +53,17 @@ export const Portfolio = () => {
               whileInView={{ opacity: 1 }}
               className="text-[10px] font-black uppercase tracking-[0.4em] text-[#1E40AF] mb-6"
             >
-              Selected Engagements
+              What We've Shipped
             </motion.div>
             <h2 className="text-5xl md:text-7xl font-bold text-[#0F172A] tracking-tighter leading-[1.1]">
-              Engineered to <br />
-              <span className="text-slate-400">Perform.</span>
+              Real products. Real users. <br />
+              <span className="text-slate-400">Real results.</span>
             </h2>
           </div>
-          <button className="group flex items-center gap-4 text-xl font-bold text-[#0F172A] pb-3 border-b-2 border-slate-100 hover:border-[#1E40AF] transition-all">
-            View Case Studies
+          <a href="#contact" className="group flex items-center gap-4 text-xl font-bold text-[#0F172A] pb-3 border-b-2 border-slate-100 hover:border-[#1E40AF] transition-all">
+            Have a similar project? Let's talk
             <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">
@@ -90,8 +102,11 @@ export const Portfolio = () => {
                   <h3 className="text-4xl font-bold text-[#0F172A] mb-6 tracking-tight group-hover:text-[#1E40AF] transition-colors duration-500">
                     {project.title}
                   </h3>
-                  <p className="text-[#64748B] text-xl leading-relaxed mb-8 font-light">
+                  <p className="text-[#64748B] text-xl leading-relaxed mb-6 font-light">
                     {project.description}
+                  </p>
+                  <p className="text-[#1E40AF] text-sm font-bold mb-8">
+                    {project.stats}
                   </p>
                   <div className="flex flex-wrap gap-4">
                     {project.tech.map((t) => (

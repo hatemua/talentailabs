@@ -1,6 +1,7 @@
 import React from "react";
 import { motion, useScroll, useTransform } from "motion/react";
-import { ChevronRight, Shield, Zap, Cpu, Database, Link as LinkIcon, BarChart3, Globe, Lock, ArrowUpRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
+import { ShieldCheck, Lightning, Globe, Lock } from "@phosphor-icons/react";
 
 const FloatingGlassCard = ({ children, className, delay = 0, yRange = [0, -20] }) => (
   <motion.div
@@ -32,7 +33,7 @@ export const Hero = () => {
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   return (
-    <section className="relative min-h-[100vh] flex flex-col items-center justify-center pt-24 pb-32 overflow-hidden bg-[#F8FAFC]">
+    <section className="relative min-h-[100vh] flex flex-col items-center justify-center pt-20 pb-24 overflow-hidden bg-[#F8FAFC]">
       {/* Ultra-Premium Background Architecture */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         {/* Subtle Radial Sunburst */}
@@ -62,7 +63,7 @@ export const Hero = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
             </span>
-            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#64748B]">Next-Gen Intelligence Active</span>
+            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#64748B]">Hedera Foundation Partner</span>
           </motion.div>
 
           {/* Master Headline */}
@@ -71,41 +72,62 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="text-6xl md:text-8xl lg:text-[7.5rem] font-bold text-[#0F172A] leading-[0.9] tracking-[-0.04em] mb-10"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#0F172A] leading-[1.1] tracking-[-0.02em] mb-6"
             >
-              The New Standard <br />
+              Blockchain & AI <br />
               <span className="bg-gradient-to-r from-[#1E40AF] via-[#7C3AED] to-[#0891B2] bg-clip-text text-transparent">
-                for On-Chain AI
+                Development Agency That Delivers
               </span>
             </motion.h1>
           </motion.div>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl text-[#64748B] mb-14 max-w-3xl leading-relaxed font-light relative z-40"
+            className="text-lg md:text-xl text-[#64748B] mb-6 max-w-3xl leading-relaxed font-normal relative z-40"
           >
-            TalentAI Labs bridges the gap between complex blockchain protocols and advanced neural architectures. Institutional-grade development for the decentralized age.
+            We're the technical team behind successful Web3 startups and enterprise blockchain projects. From smart contracts to trading bots, DeFi protocols to custom AI solutions — we turn ambitious ideas into production-ready products. Hedera Foundation backed. 12+ years of shipping code that works.
           </motion.p>
+
+          {/* Trust Micro-copy */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="flex flex-wrap gap-6 mb-10 text-sm text-[#64748B] relative z-40"
+          >
+            <span className="flex items-center gap-2">
+              <ShieldCheck className="w-5 h-5 text-[#1E40AF]" weight="duotone" />
+              Free consultation
+            </span>
+            <span className="flex items-center gap-2">
+              <Lightning className="w-5 h-5 text-[#1E40AF]" weight="duotone" />
+              24h response
+            </span>
+            <span className="flex items-center gap-2">
+              <Globe className="w-5 h-5 text-[#1E40AF]" weight="duotone" />
+              EU-based team
+            </span>
+          </motion.div>
 
           {/* Action Group */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-6 mb-20 relative z-40"
+            className="flex flex-col sm:flex-row gap-4 mb-16 relative z-40"
           >
-            <button className="group relative px-12 py-6 bg-[#0F172A] text-white rounded-[2rem] font-bold text-xl transition-all hover:scale-105 active:scale-95 shadow-[0_20px_50px_rgba(15,23,42,0.3)]">
-              <span className="relative z-10 flex items-center gap-3">
-                Start Building
-                <ChevronRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+            <a href="#contact" className="group relative px-8 py-4 bg-[#0F172A] text-white rounded-xl font-semibold text-base transition-all hover:scale-105 active:scale-95 shadow-[0_8px_24px_rgba(15,23,42,0.2)]">
+              <span className="relative z-10 flex items-center gap-2">
+                Start Your Project
+                <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
-              <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </button>
-            <button className="px-12 py-6 bg-white text-[#0F172A] border border-slate-200 rounded-[2rem] font-bold text-xl hover:bg-slate-50 transition-all hover:shadow-xl active:scale-95">
-              Explore Services
-            </button>
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+            </a>
+            <a href="#portfolio" className="px-8 py-4 bg-white text-[#0F172A] border border-slate-200 rounded-xl font-semibold text-base hover:bg-slate-50 transition-all hover:shadow-lg active:scale-95">
+              See Our Work
+            </a>
           </motion.div>
         </div>
       </div>
@@ -127,7 +149,7 @@ export const Hero = () => {
         </div>
         <div className="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
           <span className="text-[9px] font-bold text-[#1E40AF]">VALIDATED</span>
-          <Shield className="w-3 h-3 text-[#1E40AF]" />
+          <ShieldCheck className="w-3 h-3 text-[#1E40AF]" weight="duotone" />
         </div>
       </FloatingGlassCard>
 
@@ -157,7 +179,7 @@ export const Hero = () => {
       <FloatingGlassCard className="top-[40%] right-[5vw] p-4 hidden xl:block" delay={0.7} yRange={[0, -10]}>
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center shadow-lg shadow-emerald-100">
-            <Lock className="w-5 h-5 text-white" />
+            <Lock className="w-5 h-5 text-white" weight="duotone" />
           </div>
           <div>
             <div className="text-[10px] font-bold text-[#0F172A]">AI AUDIT</div>

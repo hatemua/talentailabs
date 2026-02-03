@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Quote, ArrowRight, ArrowLeft, ChevronRight } from "lucide-react";
-import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
+import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 
 const testimonials = [
   {
     id: 1,
     name: "Alex Thompson",
     role: "CTO at Hyperdrive Web3",
-    content: "TalentAI Labs delivered our smart contracts ahead of schedule. Their blockchain expertise is world-class and communication was excellent throughout the audit process.",
+    content: "TalentAI Labs took our DeFi concept and turned it into a working protocol in 3 months. Their smart contract expertise saved us from at least two critical vulnerabilities we would have missed. They're not just developers — they're partners who care about the outcome.",
     image: "https://images.unsplash.com/photo-1643285740368-f7f1ba6b116f?auto=format&fit=crop&q=80&w=400",
     company: "Hyperdrive",
-    stat: "99% Audit Score"
+    stat: "3 Month Delivery"
   },
   {
     id: 2,
     name: "Sarah Chen",
-    role: "Founder at Lunar DeFi",
-    content: "We needed complex tokenomics and cross-chain mechanics. They understood our vision immediately and built exactly what we needed for our mainnet launch.",
+    role: "Product Lead at Lunar DeFi",
+    content: "We needed a blockchain team that understood both the technical complexity AND the business requirements. TalentAI Labs delivered exactly what we needed, on time, and actually explained things in terms our stakeholders could understand.",
     image: "https://images.unsplash.com/flagged/photo-1573582677725-863b570e3c00?auto=format&fit=crop&q=80&w=400",
     company: "Lunar",
     stat: "$40M TVL Secured"
@@ -25,8 +25,8 @@ const testimonials = [
   {
     id: 3,
     name: "Marcus Weber",
-    role: "VP Engineering at Quantum Ledger",
-    content: "Professional, technical, and reliable. They became an extension of our core team and delivered a production-ready platform that scaled seamlessly during peak load.",
+    role: "Founder at Quantum Trading",
+    content: "The trading bot they built processes our strategies flawlessly. Their AI expertise combined with blockchain knowledge is rare. And they're genuinely good people to work with.",
     image: "https://images.unsplash.com/photo-1737574821698-862e77f044c1?auto=format&fit=crop&q=80&w=400",
     company: "Quantum",
     stat: "0.2s Avg Latency"
@@ -65,11 +65,11 @@ export const Testimonials = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 className="text-[10px] font-black uppercase tracking-[0.4em] text-[#1E40AF] mb-6"
               >
-                Institutional Feedback
+                What Our Partners Say
               </motion.div>
               <h2 className="text-5xl md:text-6xl font-bold text-[#0F172A] tracking-tighter leading-[1.1]">
-                Voices of <br />
-                <span className="text-slate-400">Engineering.</span>
+                Client <br />
+                <span className="text-slate-400">Testimonials</span>
               </h2>
             </div>
             
@@ -140,30 +140,35 @@ export const Testimonials = () => {
               <motion.div
                 key={currentIndex}
                 custom={direction}
-                initial={(d: number) => ({
-                  opacity: 0,
-                  rotateY: d > 0 ? 120 : -120,
-                  rotateX: d > 0 ? 20 : -20,
-                  z: -1000,
-                  x: d > 0 ? 300 : -300,
-                  scale: 0.5,
-                })}
-                animate={{
-                  opacity: 1,
-                  rotateY: 0,
-                  rotateX: 0,
-                  z: 0,
-                  x: 0,
-                  scale: 1,
+                variants={{
+                  enter: (d: number) => ({
+                    opacity: 0,
+                    rotateY: d > 0 ? 120 : -120,
+                    rotateX: d > 0 ? 20 : -20,
+                    z: -1000,
+                    x: d > 0 ? 300 : -300,
+                    scale: 0.5,
+                  }),
+                  center: {
+                    opacity: 1,
+                    rotateY: 0,
+                    rotateX: 0,
+                    z: 0,
+                    x: 0,
+                    scale: 1,
+                  },
+                  exit: (d: number) => ({
+                    opacity: 0,
+                    rotateY: d > 0 ? -120 : 120,
+                    rotateX: d > 0 ? -20 : 20,
+                    z: -1000,
+                    x: d > 0 ? -300 : 300,
+                    scale: 0.5,
+                  }),
                 }}
-                exit={(d: number) => ({
-                  opacity: 0,
-                  rotateY: d > 0 ? -120 : 120,
-                  rotateX: d > 0 ? -20 : 20,
-                  z: -1000,
-                  x: d > 0 ? -300 : 300,
-                  scale: 0.5,
-                })}
+                initial="enter"
+                animate="center"
+                exit="exit"
                 transition={{
                   type: "spring",
                   stiffness: 40,

@@ -22,39 +22,55 @@ const techCategories = [
     id: "blockchain",
     title: "Blockchain & Web3",
     icon: Layers,
-    description: "Architecting secure, scalable decentralized ecosystems.",
+    description: "Deep expertise, not surface-level knowledge.",
     color: "#1E40AF",
     items: [
-      { name: "Hedera", icon: Zap, detail: "Enterprise DLT & HCS" },
-      { name: "Ethereum", icon: Globe, detail: "EVM & L2 Scaling" },
-      { name: "Solana", icon: Box, detail: "High-Performance Rust" },
-      { name: "Smart Contracts", icon: Lock, detail: "Audit-Ready Solidity" },
+      { name: "Hedera Hashgraph", icon: Zap, detail: "Foundation Partner, $50K Grant" },
+      { name: "Ethereum", icon: Globe, detail: "100+ smart contracts deployed" },
+      { name: "Solana", icon: Box, detail: "Rust programs, SPL tokens" },
+      { name: "Avalanche", icon: Lock, detail: "Subnet expertise" },
+      { name: "Polygon", icon: Layers, detail: "L2 scaling solutions" },
+      { name: "BNB Chain", icon: Code2, detail: "DeFi and GameFi" },
     ]
   },
   {
     id: "ai",
-    title: "AI & Intelligence",
+    title: "AI & Data",
     icon: Cpu,
-    description: "Neural architectures for real-world automation.",
+    description: "Core AI development and LLM integration.",
     color: "#7C3AED",
     items: [
-      { name: "Neural Networks", icon: Workflow, detail: "Custom LLM Fine-tuning" },
-      { name: "Python", icon: Code2, detail: "PyTorch & TensorFlow" },
-      { name: "Computer Vision", icon: Fingerprint, detail: "Spatial Intelligence" },
-      { name: "Automation", icon: Zap, detail: "Autonomous Agents" },
+      { name: "Python", icon: Code2, detail: "Core AI development" },
+      { name: "TensorFlow/PyTorch", icon: Workflow, detail: "ML models" },
+      { name: "OpenAI/Claude APIs", icon: Fingerprint, detail: "LLM integration" },
+      { name: "n8n", icon: Zap, detail: "Workflow automation" },
+      { name: "Data Pipelines", icon: Database, detail: "Real-time processing" },
+    ]
+  },
+  {
+    id: "frontend",
+    title: "Frontend",
+    icon: Globe,
+    description: "Modern web and mobile development.",
+    color: "#0891B2",
+    items: [
+      { name: "React/Next.js", icon: Code2, detail: "Primary stack" },
+      { name: "TypeScript", icon: ShieldCheck, detail: "Type-safe development" },
+      { name: "React Native", icon: Globe, detail: "Cross-platform mobile" },
+      { name: "Tailwind CSS", icon: Layers, detail: "Rapid UI development" },
     ]
   },
   {
     id: "backend",
-    title: "Systems & Core",
+    title: "Backend",
     icon: Database,
-    description: "High-load infrastructure and secure data pipelines.",
-    color: "#0891B2",
+    description: "Scalable infrastructure and APIs.",
+    color: "#059669",
     items: [
-      { name: "Node.js", icon: Code2, detail: "Distributed Microservices" },
-      { name: "Go / Rust", icon: ShieldCheck, detail: "Low-Latency Systems" },
-      { name: "PostgreSQL", icon: Database, detail: "Optimized Datastores" },
-      { name: "Cloud Native", icon: Globe, detail: "Kubernetes & AWS" },
+      { name: "Node.js", icon: Code2, detail: "API development" },
+      { name: "PostgreSQL", icon: Database, detail: "Primary database" },
+      { name: "Redis", icon: Zap, detail: "Caching and queues" },
+      { name: "Docker/K8s", icon: Box, detail: "Container orchestration" },
     ]
   }
 ];
@@ -83,20 +99,20 @@ export const Technologies = () => {
                 viewport={{ once: true }}
                 className="text-[10px] font-black uppercase tracking-[0.8em] text-[#1E40AF] mb-6"
               >
-                Our Technical Edge
+                Battle-Tested Tech Stack
               </motion.div>
               <h2 className="text-5xl md:text-7xl font-bold text-[#0F172A] tracking-tighter leading-none">
-                Technologies <br />
-                <span className="text-slate-300">We Master.</span>
+                Battle-Tested Across <br />
+                <span className="text-slate-300">the Ecosystem</span>
               </h2>
             </div>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               className="text-slate-500 max-w-sm text-lg leading-relaxed font-medium"
             >
-              We don't just use tools; we engineer solutions that define industries across the decentralization spectrum.
+              Deep expertise, not surface-level knowledge. We master the technologies that power the decentralized future.
             </motion.p>
           </div>
 

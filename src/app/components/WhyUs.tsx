@@ -1,27 +1,27 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Clock, ShieldCheck, Globe, Zap, ArrowRight } from "lucide-react";
-import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
+import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 
 const differentiators = [
   {
-    title: "12+ Years Depth",
-    description: "Operating since the genesis block. We've weathered every cycle with unwavering technical focus.",
+    title: "12+ Years of Shipping Production Code",
+    description: "We're not blockchain tourists. We've been building software since before Ethereum existed. That experience means we've seen what works, what fails, and how to avoid expensive mistakes.",
     icon: Clock,
   },
   {
-    title: "Foundation Partner",
-    description: "$50K Hedera grant recipient. We are an official cornerstone of the Web3 ecosystem.",
+    title: "Hedera Foundation Backed",
+    description: "We're a Hedera Foundation grant recipient — $50K awarded for TalentAI. When the leading enterprise blockchain trusts us, you can too.",
     icon: ShieldCheck,
   },
   {
-    title: "EU Standards",
-    description: "Lithuanian-based. GDPR compliant. Operating with total transparency and European rigor.",
+    title: "EU-Based, Globally Minded",
+    description: "Headquartered in Vilnius, Lithuania. EU business standards, GDPR compliant, proper contracts. But we work with clients worldwide and communicate in your timezone.",
     icon: Globe,
   },
   {
-    title: "Total Delivery",
-    description: "We don't provide slides; we provide production code that scales to millions of users.",
+    title: "We Build AND Operate",
+    description: "We don't just write code and disappear. We've built products we run ourselves. That means we understand the full lifecycle — from MVP to scale to maintenance.",
     icon: Zap,
   },
 ];
@@ -40,13 +40,13 @@ export const WhyUs = () => {
                 whileInView={{ opacity: 1 }}
                 className="text-xs font-black uppercase tracking-[0.4em] text-[#1E40AF] mb-10"
               >
-                The TalentAI Labs Difference
+                Why Teams Choose TalentAI Labs
               </motion.div>
-              
+
               <h2 className="text-5xl md:text-7xl font-bold text-[#0F172A] mb-12 tracking-tighter leading-[0.95]">
                 Why the world's <br />
                 most ambitious <br />
-                <span className="text-slate-400">Founders choose us.</span>
+                <span className="text-slate-400">founders choose us.</span>
               </h2>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-16">

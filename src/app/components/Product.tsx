@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Users, ShieldCheck, Brain, ArrowUpRight } from "lucide-react";
-import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
+import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 
 export const Product = () => {
   return (
@@ -19,16 +19,20 @@ export const Product = () => {
                 whileInView={{ opacity: 1 }}
                 className="text-xs font-black uppercase tracking-[0.4em] text-blue-400 mb-10"
               >
-                In-House Innovation
+                Our Product: TalentAI
               </motion.div>
-              
+
               <h2 className="text-5xl md:text-7xl font-bold text-white mb-10 leading-[0.95] tracking-tighter">
-                TalentAI — <br />
-                <span className="text-blue-400">Skill Trust.</span>
+                The Skill Verification <br />
+                <span className="text-blue-400">Platform We Built For Ourselves</span>
               </h2>
-              
+
+              <p className="text-xl text-slate-400 mb-8 leading-relaxed font-light">
+                TalentAI started as a solution to our own hiring problem: how do you know if someone actually has the skills they claim? We built an AI-powered platform that verifies real abilities through assessments and stores credentials on the blockchain.
+              </p>
+
               <p className="text-xl text-slate-400 mb-16 leading-relaxed font-light">
-                Our proprietary AI-powered recruitment platform. Using blockchain credentials to verify real-world engineering abilities for 45,000+ developers.
+                Today, 45,000+ developers use TalentAI to prove their skills. Companies use it to assess internal teams and verify external candidates. It's proof that we don't just build for clients — we build products we believe in.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 mb-20">
@@ -36,22 +40,36 @@ export const Product = () => {
                   <Users className="w-8 h-8 text-blue-400" />
                   <div>
                     <div className="text-3xl font-bold text-white">45K+</div>
-                    <div className="text-xs font-black uppercase tracking-widest text-slate-500 mt-1">Developers</div>
+                    <div className="text-xs font-black uppercase tracking-widest text-slate-500 mt-1">Verified Developers</div>
                   </div>
                 </div>
                 <div className="flex flex-col gap-4">
                   <ShieldCheck className="w-8 h-8 text-blue-400" />
                   <div>
-                    <div className="text-3xl font-bold text-white">Web3</div>
-                    <div className="text-xs font-black uppercase tracking-widest text-slate-500 mt-1">Verified</div>
+                    <div className="text-3xl font-bold text-white">$50K</div>
+                    <div className="text-xs font-black uppercase tracking-widest text-slate-500 mt-1">Hedera Grant</div>
+                  </div>
+                </div>
+                <div className="flex flex-col gap-4">
+                  <Brain className="w-8 h-8 text-blue-400" />
+                  <div>
+                    <div className="text-3xl font-bold text-white">AI-Powered</div>
+                    <div className="text-xs font-black uppercase tracking-widest text-slate-500 mt-1">Skill Assessment</div>
+                  </div>
+                </div>
+                <div className="flex flex-col gap-4">
+                  <ShieldCheck className="w-8 h-8 text-blue-400" />
+                  <div>
+                    <div className="text-3xl font-bold text-white">Blockchain</div>
+                    <div className="text-xs font-black uppercase tracking-widest text-slate-500 mt-1">Credentials</div>
                   </div>
                 </div>
               </div>
 
-              <button className="px-12 py-6 bg-white text-[#0F172A] rounded-full font-bold text-lg hover:shadow-[0_20px_40px_rgba(255,255,255,0.1)] hover:-translate-y-1 transition-all flex items-center justify-center gap-3">
-                Experience TalentAI
+              <a href="https://talentai.com" target="_blank" rel="noopener noreferrer" className="px-12 py-6 bg-white text-[#0F172A] rounded-full font-bold text-lg hover:shadow-[0_20px_40px_rgba(255,255,255,0.1)] hover:-translate-y-1 transition-all flex items-center justify-center gap-3">
+                Explore TalentAI Platform
                 <ArrowUpRight className="w-5 h-5" />
-              </button>
+              </a>
             </div>
 
             <div className="relative h-full min-h-[500px] flex items-center justify-center p-12 lg:p-0">

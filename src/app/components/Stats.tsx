@@ -34,10 +34,10 @@ const Counter = ({ value, suffix = "" }: { value: number; suffix?: string }) => 
 
 export const StatsBar = () => {
   const stats = [
-    { label: "Years of Engineering", value: 12, suffix: "+" },
-    { label: "Successful Deployments", value: 170, suffix: "+" },
-    { label: "Global User Reach", value: 45, suffix: "M+" },
-    { label: "Connected Networks", value: 8, suffix: "" },
+    { label: "Years Building Production Systems", value: 12, suffix: "+" },
+    { label: "Projects Shipped to Mainnet", value: 170, suffix: "+" },
+    { label: "Users on Our Platform", value: 45000, suffix: "+" },
+    { label: "Blockchain Networks Mastered", value: 6, suffix: "+" },
   ];
 
   return (
