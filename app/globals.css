@@ -13,4 +13,32 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Dark scrollbar for Partners window */
+  .partners-dark-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .partners-dark-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .partners-dark-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 3px;
+  }
+
+  .partners-dark-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  /* Hide scrollbar for dock */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }

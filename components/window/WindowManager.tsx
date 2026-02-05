@@ -11,10 +11,10 @@ const PortfolioWindow = React.lazy(() => import('../windows/PortfolioWindow'));
 const TalentAIWindow = React.lazy(() => import('../windows/TalentAIWindow'));
 const TeamWindow = React.lazy(() => import('../windows/TeamWindow'));
 const TechStackWindow = React.lazy(() => import('../windows/TechStackWindow'));
-const BlogWindow = React.lazy(() => import('../windows/BlogWindow'));
 const ContactWindow = React.lazy(() => import('../windows/ContactWindow'));
 const TerminalWindow = React.lazy(() => import('../windows/TerminalWindow'));
 const READMEWindow = React.lazy(() => import('../windows/READMEWindow'));
+const PartnerWindow = React.lazy(() => import('../windows/PartnerWindow'));
 
 const WINDOW_COMPONENTS: Record<string, React.LazyExoticComponent<React.FC>> = {
   about: AboutWindow,
@@ -23,10 +23,10 @@ const WINDOW_COMPONENTS: Record<string, React.LazyExoticComponent<React.FC>> = {
   talentai: TalentAIWindow,
   team: TeamWindow,
   tech: TechStackWindow,
-  blog: BlogWindow,
   contact: ContactWindow,
   terminal: TerminalWindow,
   readme: READMEWindow,
+  partners: PartnerWindow,
 };
 
 export const WindowManager: React.FC = () => {

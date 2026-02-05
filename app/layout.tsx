@@ -81,7 +81,7 @@ export default function RootLayout({
               name: 'TalentAI Labs',
               legalName: 'TalentAI Labs UAB',
               url: 'https://talentailabs.com',
-              logo: 'https://talentailabs.com/images/logo.png',
+              logo: 'https://talentailabs.com/icons/talentai.png',
               foundingDate: '2020',
               founders: [
                 {

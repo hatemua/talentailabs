@@ -81,15 +81,23 @@ export const WINDOW_DEFAULTS = {
     hasSidebar: false,
     hasTabs: false,
   },
+  partners: {
+    title: 'Our Partners & Ecosystem',
+    icon: '/icons/partners.svg',
+    size: { width: 920, height: 620 },
+    minSize: { width: 600, height: 400 },
+    hasSidebar: false,
+    hasTabs: false,
+  },
 };
 
 // Desktop icons removed - all navigation now via dock (5 icons only)
 
 export const DOCK_ICONS = [
-  { id: 'talentai', title: 'TalentAI', icon: '/icons/talentai.png' },
   { id: 'about', title: 'About', icon: '/icons/about.png' },
   { id: 'services', title: 'Services', icon: '/icons/services.png' },
   { id: 'portfolio', title: 'Portfolio', icon: '/icons/portfolio.png' },
+  { id: 'partners', title: 'Partners', icon: '/icons/partners.png' },
   { id: 'contact', title: 'Contact', icon: '/icons/contact.png' },
 ];
 

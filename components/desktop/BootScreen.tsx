@@ -86,9 +86,13 @@ export const BootScreen: React.FC<BootScreenProps> = ({ onComplete }) => {
                 repeat: stage === 'loading' ? Infinity : 0,
                 ease: 'linear',
               }}
-              className="w-24 h-24 bg-gradient-to-br from-[#1E40AF] to-[#7C3AED] rounded-3xl flex items-center justify-center shadow-2xl"
+              className="w-24 h-24 bg-white rounded-3xl flex items-center justify-center shadow-2xl p-4"
             >
-              <div className="w-16 h-16 border-4 border-white rounded-2xl" />
+              <img
+                src="/icons/talentai.png"
+                alt="TalentAI Labs"
+                className="w-full h-full object-contain"
+              />
             </motion.div>
             <div className="absolute -top-2 -right-2 w-6 h-6 bg-blue-500 rounded-full border-4 border-black" />
           </div>
